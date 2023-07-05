@@ -1,0 +1,22 @@
+{
+    "cooldown": 10,
+    "port": 1100,
+    "weapon": "Vandal",
+    "table": {
+        "skin": true,
+        "rr": true,
+        "peakrank": true,
+        "leaderboard": true,
+        "headshot_percent": true,
+        "winrate": true,
+        "kd": false
+    },
+    "flags": {
+        "last_played": true,
+        "auto_hide_leaderboard": true,
+        "pre_cls": false,
+        "game_chat": true,
+        "peak_rank_act": true,
+        "discord_rpc": true
+    }
+}
