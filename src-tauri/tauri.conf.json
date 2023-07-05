@@ -15,10 +15,13 @@
       "all": false,
       "shell": {
         "all": false,
-        "open": true
+        "open": true,
+        "sidecar": true,
+        "scope": [{ "name": "binaries/yoinker-backend", "sidecar": true }]
       }
     },
     "bundle": {
+      "externalBin": ["binaries/yoinker-backend"],
       "active": true,
       "targets": "all",
       "identifier": "com.tauri.dev",
@@ -30,6 +33,7 @@
         "icons/icon.ico"
       ]
     },
+
     "security": {
       "csp": null
     },
