@@ -1,8 +1,7 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { onMounted } from "vue";
-import MatchLoadouts from "./pages/MatchLoadouts.vue";
+import { onMounted, ref } from "vue";
+import AppHeader from "./components/AppHeader.vue";
+import MatchPage from "./pages/MatchPage.vue";
 import { Command } from "@tauri-apps/api/shell";
 
 onMounted(async () => {
@@ -13,11 +12,15 @@ onMounted(async () => {
     console.log("yoinker backend err: ", err);
   }
 });
+
+const currentView = ref("match");
 </script>
 
 <template>
-  <div class="container bg-blue-500">
-    <MatchLoadouts />
+  <div class="w-screen h-screen text-zinc-100 p-5 bg-zinc-800">
+    <AppHeader />
+    <!-- <MatchLoadouts /> -->
+    <MatchPage v-if="currentView === 'match'" />
   </div>
 </template>
 
