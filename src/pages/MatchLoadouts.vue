@@ -34,8 +34,8 @@
       :PlayerLoadout="modalArguments"
       @closeModal="closeModal"
     />
-    <pre class="bg-red-200">
-        <code>
+    <pre class="overflow-auto bg-zinc-800">
+        <code class="">
 
 
             {{ loadoutJSON }}
@@ -179,7 +179,7 @@ export default {
 
 .lastUpdateDiv {
   width: 22%;
-  text-align: center;
+
   left: 0;
   right: 0;
   margin: auto;
@@ -201,7 +201,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
 }
 

@@ -3,6 +3,7 @@ import { onMounted, ref } from "vue";
 import AppHeader from "./components/AppHeader.vue";
 import MatchPage from "./pages/MatchPage.vue";
 import { Command } from "@tauri-apps/api/shell";
+import MatchLoadouts from "./pages/MatchLoadouts.vue";
 
 onMounted(async () => {
   const command = Command.sidecar("binaries/yoinker-backend");
@@ -19,8 +20,8 @@ const currentView = ref("match");
 <template>
   <div class="w-screen h-screen text-zinc-100 p-5 bg-zinc-800">
     <AppHeader />
-    <!-- <MatchLoadouts /> -->
-    <MatchPage v-if="currentView === 'match'" />
+    <MatchLoadouts />
+    <!-- <MatchPage v-if="currentView === 'match'" /> -->
   </div>
 </template>
 
